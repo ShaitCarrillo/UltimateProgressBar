@@ -66,7 +66,7 @@ export default {
       this.year.total = daysOfYear
       this.year.progress = Math.floor((now - start_date) / (1000 * 60 * 60 * 24))
       this.month.total = this.getDaysInMonth(now.getFullYear(),now.getMonth()+1)
-      this.month.progress = now.getDate()
+      this.month.progress = now.getDate()-1
       this.week.progress = now.getDay()+1
       this.day.progress = now.getHours()
       this.hour.progress = now.getMinutes()
