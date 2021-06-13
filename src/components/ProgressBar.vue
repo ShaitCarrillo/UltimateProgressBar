@@ -39,6 +39,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
+@use "sass:math"
+
 #main
   width: 100%
 .title
@@ -72,5 +74,5 @@ export default {
     background: linear-gradient(.25turn,rgb(0,65,255),rgba(255,0,0))
 @for $col from 0 through 100
   .percent-#{$col}
-    width: calc( #{percentage($col / 100)} - 10px)
+    width: calc( #{percentage(math.div($col,100))} - 10px)
 </style>
